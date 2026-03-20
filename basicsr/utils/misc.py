@@ -92,7 +92,7 @@ def scandir(dir_path, suffix=None, recursive=False, full_path=False):
     if (suffix is not None) and not isinstance(suffix, (str, tuple)):
         raise TypeError('"suffix" must be a string or tuple of strings')
 
-    dir_path = os.path.abspath(dir_path)
+    dir_path = os.path.abspath("basicsr",dir_path)
     root = dir_path
 
     def _scandir(dir_path, suffix, recursive):
